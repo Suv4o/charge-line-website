@@ -75,12 +75,15 @@ practices and SEO, on the home, support and privacy pages.
 
 ## Deploying on Vercel
 
-1. Push this folder to its own GitHub repository, and import it in Vercel. Vercel detects Next.js and the
-   static export by itself; no settings to change.
-2. In the project's Domains, add `chargeline.au` and `www.chargeline.au`, with `chargeline.au` as the
-   main one (www redirects to it).
-3. At GoDaddy, set the DNS records Vercel shows for each (an A record for `chargeline.au`, a CNAME for
-   `www`). Vercel then issues the HTTPS certificates.
+1. Import this repository in Vercel (Add New › Project). Vercel detects Next.js and the static export by
+   itself; no settings to change. Every push to `main` then deploys.
+2. In the project's Settings › Domains, add `chargeline.au`. Vercel suggests `www` as the main domain:
+   choose **`chargeline.au`** as the main one, with `www.chargeline.au` redirecting to it. The canonical
+   URLs, sitemap, structured data and agent files all use `https://chargeline.au`, and if Tesla's public
+   key moves here it must be served without a redirect.
+3. At GoDaddy, add the DNS records Vercel shows (an A record for the domain, a CNAME for `www`). They're
+   specific to the project, so copy them from Vercel, and delete GoDaddy's parked records for the same
+   names. Vercel then issues the HTTPS certificates.
 
 ## When the app is on the App Store
 
