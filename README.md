@@ -3,8 +3,7 @@
 The website for **Charge Line**, the iPhone app that plans EV road trips across Australia: what the app
 does, Premium and its prices, questions, and the support, privacy and terms pages.
 
-A static site: Next.js builds plain HTML, CSS and files into `out/`, and Vercel serves them. No server,
-no cookies, no analytics.
+A static site: Next.js builds plain HTML, CSS and files into `out/`. No server, no cookies, no analytics.
 
 ## Commands
 
@@ -12,9 +11,9 @@ no cookies, no analytics.
 npm install
 npm run dev          # http://localhost:3000, reloads as you edit
 npm run build        # the static site, in out/
-npm run serve        # serves out/ on http://localhost:3000, as Vercel will
+npm run serve        # serves out/ on http://localhost:3000
 npm run typecheck
-npm run images -- ~/Desktop/"Charge Line App Store"   # remake screenshots, icons and the social image
+npm run images -- "<screenshots folder>"   # remake screenshots, icons and the social image
 ```
 
 Node 24. Every package is at its latest version (`npm outdated` prints nothing). There's no ESLint on
@@ -40,9 +39,9 @@ lib/                 Markdown, structured data, agent files, page metadata
 public/
 ├── screens/         app screenshots, AVIF with JPEG fallback, 1x and 2x
 ├── icons/, opengraph-image.png
+├── _headers         security headers, caching, and content types for the agent files
 └── .well-known/     security.txt, api-catalog
 scripts/             images.sh (+ og.swift, favicon.mjs), serve.mjs
-vercel.json          security headers, and content types for the agent files
 ```
 
 To change what the site says, edit `content/`. The home page, the structured data and the agent files all
@@ -72,18 +71,6 @@ small text uses deeper steps of them; the brand coral stays for large text and d
 
 Checked on 5 November 2026 with Lighthouse: 100 for performance, accessibility (light and dark), best
 practices and SEO, on the home, support and privacy pages.
-
-## Deploying on Vercel
-
-1. Import this repository in Vercel (Add New › Project). Vercel detects Next.js and the static export by
-   itself; no settings to change. Every push to `main` then deploys.
-2. In the project's Settings › Domains, add `chargeline.au`. Vercel suggests `www` as the main domain:
-   choose **`chargeline.au`** as the main one, with `www.chargeline.au` redirecting to it. The canonical
-   URLs, sitemap, structured data and agent files all use `https://chargeline.au`, and if Tesla's public
-   key moves here it must be served without a redirect.
-3. At GoDaddy, add the DNS records Vercel shows (an A record for the domain, a CNAME for `www`). They're
-   specific to the project, so copy them from Vercel, and delete GoDaddy's parked records for the same
-   names. Vercel then issues the HTTPS certificates.
 
 ## When the app is on the App Store
 

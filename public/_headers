@@ -1,0 +1,31 @@
+# Response headers for the static site. HTTPS (HSTS) is left to the host's default.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# File names include a hash of their contents, so they never change
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/screens/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+/privacy.md
+  Content-Type: text/markdown; charset=utf-8
+/terms.md
+  Content-Type: text/markdown; charset=utf-8
+/support.md
+  Content-Type: text/markdown; charset=utf-8
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8

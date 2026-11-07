@@ -19,7 +19,7 @@ export const site = {
   /** Charge Line's public list of Australia's chargers (ODbL). */
   chargerDataUrl: "https://charge-line-server.fly.dev/v1/chargers/au",
   /** When the site's content last changed (sitemap, structured data). */
-  updated: "2026-11-05",
+  updated: "2026-11-07",
   locale: "en-AU",
   requires: "iOS 26 or later",
   carModels: 226,

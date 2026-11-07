@@ -1,5 +1,5 @@
-// Serves the built site (out/) on http://localhost:3000, resolving /privacy to privacy.html as Vercel
-// does, to check a build before it's deployed. Usage: npm run build && npm run serve [-- port]
+// Serves the built site (out/) on http://localhost:3000, resolving /privacy to privacy.html as a static
+// host does, to check a build. Usage: npm run build && npm run serve [-- port]
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";

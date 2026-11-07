@@ -1,6 +1,6 @@
 # Privacy policy
 
-Charge Line · last updated 5 November 2026
+Charge Line · last updated 7 November 2026
 
 Charge Line is an iPhone app, with CarPlay, that plans electric-vehicle road trips in Australia and can send them to the driver's own Tesla. It has no accounts, no advertising and no analytics, and it doesn't sell or share your data.
 
@@ -50,7 +50,7 @@ Charge Line Premium is bought through Apple's In-App Purchase. Apple handles the
 
 ## This website
 
-This website uses no cookies and no analytics. If you choose light or dark appearance, your browser remembers the choice; it isn't sent anywhere. The site is hosted on Vercel, which keeps logs of visits, such as the internet address, browser and page, to run and protect its service, as described in [Vercel's privacy policy](https://vercel.com/legal/privacy-policy).
+This website uses no cookies and no analytics. If you choose light or dark appearance, your browser remembers the choice; it isn't sent anywhere. The site is hosted on Netlify, which may log visits, such as the internet address, browser and page, to run and protect its service, as described in [Netlify's privacy statement](https://www.netlify.com/privacy/).
 
 ## Contact
 
