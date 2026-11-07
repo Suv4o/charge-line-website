@@ -5,7 +5,7 @@
   "description": "chargeline.au: the website for Charge Line, EV road trips across Australia",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/static-only.mjs",
     "serve": "node scripts/serve.mjs",
     "typecheck": "tsc --noEmit",
     "images": "zsh scripts/images.sh"

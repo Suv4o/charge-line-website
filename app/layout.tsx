@@ -32,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang={site.locale} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script src="/theme.js" defer />
       </head>
       <body>
         <a className="skip-link" href="#main">

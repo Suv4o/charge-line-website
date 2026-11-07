@@ -25,6 +25,8 @@
   Content-Type: text/markdown; charset=utf-8
 /support.md
   Content-Type: text/markdown; charset=utf-8
+/manifest.webmanifest
+  Content-Type: application/manifest+json
 /.well-known/api-catalog
   Content-Type: application/linkset+json
 /.well-known/security.txt

@@ -3,7 +3,9 @@
 The website for **Charge Line**, the iPhone app that plans EV road trips across Australia: what the app
 does, Premium and its prices, questions, and the support, privacy and terms pages.
 
-A static site: Next.js builds plain HTML, CSS and files into `out/`. No server, no cookies, no analytics.
+A static site: Next.js builds plain HTML, CSS and files into `out/`, then `scripts/static-only.mjs` removes
+React's browser code, so pages are HTML and CSS with one small script for the appearance switch. No server,
+no cookies, no analytics.
 
 ## Commands
 
@@ -40,8 +42,9 @@ public/
 ├── screens/         app screenshots, AVIF with JPEG fallback, 1x and 2x
 ├── icons/, opengraph-image.png
 ├── _headers         security headers, caching, and content types for the agent files
+├── theme.js          the appearance switch, the only script the pages need
 └── .well-known/     security.txt, api-catalog
-scripts/             images.sh (+ og.swift, favicon.mjs), serve.mjs
+scripts/             static-only.mjs (part of the build), images.sh (+ og.swift, favicon.mjs), serve.mjs
 ```
 
 To change what the site says, edit `content/`. The home page, the structured data and the agent files all
@@ -69,8 +72,8 @@ small text uses deeper steps of them; the brand coral stays for large text and d
   (`charge-line-server.fly.dev/v1/chargers/au`, ODbL).
 - `/.well-known/security.txt` (RFC 9116).
 
-Checked on 5 November 2026 with Lighthouse: 100 for performance, accessibility (light and dark), best
-practices and SEO, on the home, support and privacy pages.
+Checked on 7 November 2026 with Lighthouse: 100 for performance, accessibility (light and dark), best
+practices and SEO, on the home and privacy pages.
 
 ## When the app is on the App Store
 

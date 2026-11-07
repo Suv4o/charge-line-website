@@ -1,0 +1,4 @@
+# The full build, including scripts/static-only.mjs.
+[build]
+  command = "npm run build"
+  publish = "out"
