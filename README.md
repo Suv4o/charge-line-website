@@ -43,7 +43,8 @@ public/
 ├── icons/, opengraph-image.png
 ├── _headers         security headers, caching, and content types for the agent files
 ├── theme.js          the appearance switch, the only script the pages need
-└── .well-known/     security.txt, api-catalog
+├── callback/         takes Tesla's sign-in back to the app
+└── .well-known/     security.txt, api-catalog, and the public key Tesla reads
 scripts/             static-only.mjs (part of the build), images.sh (+ og.swift, favicon.mjs), serve.mjs
 ```
 

@@ -24,7 +24,8 @@ const keepsScript = (attributes, body) =>
   body.startsWith("try{var t=localStorage");
 
 const files = await filesIn(root);
-const pages = files.filter((file) => file.endsWith(".html"));
+// public/callback/ is written by hand: it has no React code, and needs its own script
+const pages = files.filter((file) => file.endsWith(".html") && file !== join(root, "callback", "index.html"));
 
 for (const page of pages) {
   const html = await readFile(page, "utf8");

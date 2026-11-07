@@ -31,3 +31,10 @@
   Content-Type: application/linkset+json
 /.well-known/security.txt
   Content-Type: text/plain; charset=utf-8
+/.well-known/appspecific/com.tesla.3p.public-key.pem
+  Content-Type: application/x-x509-ca-cert
+
+# Tesla sign-in returns here with a code in the address
+/callback/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex
